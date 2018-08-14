@@ -1,7 +1,8 @@
 #!/bin/bash
 set -euo pipefail
+source config.sh
 
-mkdir -P "$LIVE_BOOT_PATH"
+mkdir -p "$LIVE_BOOT_PATH"
 
 sudo debootstrap \
 	--arch="$ARCH" \
