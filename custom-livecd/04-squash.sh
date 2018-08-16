@@ -4,13 +4,13 @@ source config.sh
 
 mkdir -p $LIVE_BOOT_PATH/{scratch,image/live}
 
-sudo mksqashfs \
+sudo mksquashfs \
 	"$CHROOT_PATH" \
 	"$LIVE_BOOT_PATH/image/live/filesystem.sqashfs" \
 	-e boot
 
-cp "$CHROOT_PATH/boot/vmlinuz-*" "$LIVE_BOOT_PATH/image/vmlinuz"
-cp "$CHROOT_PATH/boot/initrd.img-*" "$LIVE_BOOT_PATH/image/initrd"
+cp $CHROOT_PATH/boot/vmlinuz-* "$LIVE_BOOT_PATH/image/vmlinuz"
+cp $CHROOT_PATH/boot/initrd.img-* "$LIVE_BOOT_PATH/image/initrd"
 
 cat <<'EOF' >$LIVE_BOOT_PATH/scratch/grub.cfg
 
