@@ -38,7 +38,7 @@ PACKAGES+=('openssh-server')
 PACKAGES+=('debootstrap')
 PACKAGES+=('gdisk')
 PACKAGES+=('dpkg-dev')
-PACKAGES+=('zfs-dkms')  # zfs capabilities
+PACKAGES+=('parted')
 PACKAGES+=('gparted')  # gui partition management
 
 # Thinkpad 
@@ -56,13 +56,17 @@ PACKAGES+=('sysstat')
 PACKAGES+=('x11-xserver-utils')
 PACKAGES+=('arandr')
 
+# zfs things
+PACKAGES+=('zfs-dkms')  # zfs capabilities
+PACKAGES+=('zfsutils-linux')
+PACKAGES+=('zfs-initramfs')
+
 REMOVE=()
 REMOVE+=('vim-tiny')
 
 apt-get remove "${REMOVE[@]}"
 apt-get install -y --no-install-recommends "${PACKAGES[@]}"
 apt-get clean
-passwd root
 
 exit	
 EOF
