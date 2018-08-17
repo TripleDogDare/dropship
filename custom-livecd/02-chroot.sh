@@ -6,8 +6,13 @@ sudo cp config.sh "$CHROOT_PATH/config.sh"
 sudo chroot $CHROOT_PATH /bin/bash -c "$(cat <<'EOF'
 
 set -x
+mount -t proc proc proc/
+trap 'umount proc' 0 1 2 3 15
+
 source /config.sh
 rm /config.sh
+export LC_ALL
+export XKBLAYOUT
 
 echo 'debian-live' > /etc/hostname
 echo "deb http://httpredir.debian.org/debian/ ${RELEASE} main contrib non-free" >> /etc/apt/sources.list
@@ -71,5 +76,4 @@ apt-get clean
 exit	
 EOF
 )"
-
 

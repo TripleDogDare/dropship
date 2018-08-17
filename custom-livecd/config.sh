@@ -5,4 +5,6 @@ VARIANT='minbase'
 RELEASE='stretch'
 MIRROR='http://ftp.us.debian.org/debian/'
 LINUX_IMAGE='linux-image-amd64'  # Can use `apt-cache search linux-image` to find others
+LC_ALL='en_US.UTF-8' # locale language
+XKBLAYOUT='us'  # keyboard layout
 
