@@ -1,0 +1,5 @@
+RELEASE='stretch'
+ARCHITECTURE='amd64'
+ISO_VOLUME="Debian ${RELEASE} ${ARCHITECTURE} Live"
+TARGET_DIR="/tmp/debian-${RELEASE}-${ARCHITECTURE}-live"
+

@@ -54,10 +54,10 @@ xorriso \
     -eltorito-alt-boot \
         -e EFI/efiboot.img \
         -no-emul-boot \
-    -append_partition 2 0xef ${LIVE_BOOTPATH}/scratch/efiboot.img \
+    -append_partition 2 0xef ${LIVE_BOOT_PATH}/scratch/efiboot.img \
     -output "${LIVE_BOOT_PATH}/debian-custom.iso" \
     -graft-points \
         "${LIVE_BOOT_PATH}/image" \
         /boot/grub/bios.img=${LIVE_BOOT_PATH}/scratch/bios.img \
-        /EFI/efiboot.img=$LIVE_BOOT_PATH}/scratch/efiboot.img
+        /EFI/efiboot.img=${LIVE_BOOT_PATH}/scratch/efiboot.img
 

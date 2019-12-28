@@ -1,3 +1,5 @@
+Currently these scripts result in an image which does not boot.
+
 This repository is based on scripts found at the following blog and modified for my needs.
 https://willhaley.com/blog/custom-debian-live-environment/#notes
 
