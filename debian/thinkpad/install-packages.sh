@@ -2,10 +2,9 @@
 set -euo pipefail
 
 # https://wiki.archlinux.org/index.php/TLP
-# unclear if tp-smapi-dkms is still a thing that works?
-apt install tlp tp-smapi-dkms
-
-
+# http://www.thinkwiki.org/wiki/Tp_smapi#Model-specific_status
+# tp-smapi is for older computers
+apt install tlp acpi-call-dkms
 
 # Thinkfan?? fancontrol??
 # https://forums.opensuse.org/showthread.php/535833-Thinkfan-installation-guide
