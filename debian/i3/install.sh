@@ -32,6 +32,7 @@ PACKAGES+=('i3')
 PACKAGES+=('i3lock')
 PACKAGES+=('i3blocks')
 PACKAGES+=('acpi') # needed for battery data
+PACKAGES+=('lm-sensors') # needed for cpu temp data
 PACKAGES+=('sysstat') # needed for cpu data
 PACKAGES+=('x11-xserver-utils' 'arandr') # display configuration
 PACKAGES+=('xss-lock')
