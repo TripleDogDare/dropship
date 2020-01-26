@@ -25,6 +25,7 @@ PACKAGES+=('silversearcher-ag')
 PACKAGES+=('lm-sensors')
 PACKAGES+=('hddtemp')
 PACKAGES+=('psensor')
+PACKAGES+=('smartmontools')
 
 PACKAGES+=('thermald') # intel only
 
