@@ -34,6 +34,7 @@ PACKAGES+=('i3blocks')
 PACKAGES+=('acpi') # needed for battery data
 PACKAGES+=('sysstat') # needed for cpu data
 PACKAGES+=('x11-xserver-utils' 'arandr') # display configuration
+PACKAGES+=('xss-lock')
 
 apt-get install -y "${PACKAGES[@]}"
 
